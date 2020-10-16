@@ -1,0 +1,620 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+  <title>www.bbhackers.in</title>
+  <style>
+    img {
+      height: 450px;
+    }
+
+    p {
+      width: 20%;
+      margin: auto;
+    }
+
+    h4 {
+      color:black;
+      font-family: sans-serif;
+      font-size: 0.7rem;
+
+
+      font-weight: bolder;
+
+    }
+
+    h4:hover {
+      color: red;
+      cursor: pointer;
+      font-size: 0.9rem;
+
+    }
+
+    #mera {
+
+      padding: 25px;
+      background-color: black;
+      color: white;
+    }
+
+    h3 {
+      font-weight: bolder;
+      color: black;
+      font-size: 0.9rem;
+
+    }
+
+    h3:hover {
+      font-size: 1.2rem;
+      color: red;
+      cursor: pointer;
+    }
+
+    h5 {
+      color: red;
+    }
+
+    footer {
+      background-color: rgb(44, 5, 40);  
+    }
+
+    .card-text {
+      width: 100%;
+    }
+
+    .lund {
+      width: 100%;
+      font-family: cursive;
+      color:red;
+      font-weight: bolder;
+      line-height: 1.8rem;
+    }
+
+    #personal {
+      margin: 0px 0px 0px 50px;
+      width: 80%;
+      margin: auto;
+
+    }
+    .naya{
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+  {% load static %}
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style='background-image:url( "{%static 'back.jpg' %}");'>
+    <a class="navbar-brand" href="#">B-block hackers</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="/bblock">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="About/">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="members/">Members</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Check-out
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="https://www.instagram.com/">OUR INSTAGRAM</a>
+            <a class="dropdown-item" href="Founder/">FOUNDER</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="contact/">Contact-Us</a>
+          </div>
+        </li>
+
+      </ul>
+      <button type="button" class="btn btn-success mx-1" data-toggle="modal" data-target="#loginmodal">
+        log in
+      </button>
+      <button type="button" class="btn btn-danger mx-1" data-toggle="modal" data-target="#signupmodal">
+        signup
+      </button>
+      <button type="button" class="btn btn-dark mx-1" data-toggle="modal" data-target="#seemoremodal">
+        Exit
+      </button>
+    </div>
+  </nav>
+  {% for message in messages %}
+  <div class="alert alert-{ message.tags }} alert-dismissible fade show" role="alert">
+    <strong>Hello there! </strong> {{message}}
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+
+  {% endfor %}
+  <br>
+  <div class="container">
+
+    <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+        <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+        <li data-target="#carouselExampleCaptions" data-slide-to="3"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="{%static 'bblock2.jpg' %}" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5 class="naya">Aao, padharo maao desh</h5>
+            <p class="lund">Ab aaye ho to pura dekh kar hi jaana.</p>
+
+
+
+
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="{%static 'bblock6.jpg' %}" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5 class="naya">B-block hackers .</h5>
+            <p class="lund">Divided by branches , United by block</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="{%static 'bblock.jpg' %}" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5 class="naya">Recent achievements:</h5>
+            <p class="lund">Two of our members got intern at flipkart</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="{%static 'bblock3.jpg' %}" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5 class="naya">Characters:</h5>
+            <p class="lund">You will find every character you see in cinema</p>
+          </div>
+        </div>
+
+        <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+      <strong>Holy guacamole!</strong> Aww yeah, you successfully read reached the official page of B-block Hackers This
+      example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of
+      content.
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+  </div>
+  <!-- Button trigger modal -->
+
+
+  <div class="modal fade" id="loginmodal" data-backdrop="static" data-keyboard="false" tabindex="-1"
+    aria-labelledby="loginmodal" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="loginmodal">Log-in to your account</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form action="login/" method="POST">{% csrf_token %}
+            <div class="form-group">
+              <label for="loginmodal">Your first name</label>
+              <input type="text" class="form-control" name="yourname" id="exampleFormControlInput1"
+                placeholder="enter your name" required>
+            </div>
+            <div class="form-group">
+              <label for="loginmodal">Your password</label>
+              <input type="password" class="form-control" name="yourpassword" id="exampleFormControlInput1"
+                placeholder="enter your paasword" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Continue</button>
+
+
+          </form>
+        </div>
+        <div class="modal-footer">
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="signupmodal" data-backdrop="static" data-keyboard="false" tabindex="-1"
+    aria-labelledby="signupmodal" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="signupmodal">Welcome , Create your account here!</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form action="signup/" method="POST"> {% csrf_token %}
+            <div class="form-group">
+              <label for="signupmodal">First name</label>
+              <input type="text" class="form-control" name="firstname" id="exampleFormControlInput1"
+                placeholder="enter your name" required>
+            </div>
+            <div class="form-group">
+              <label for="signupmodal">last name</label>
+              <input type="text" class="form-control" name="lastname" id="exampleFormControlInput1"
+                placeholder="enter your name" required>
+            </div>
+            <div class="form-group">
+              <label for="signupmodal">Your email</label>
+              <input type="email" class="form-control" name="email" id="exampleFormControlInput1"
+                placeholder="enter your mail" required>
+            </div>
+            <div class="form-group">
+              <label for="signupmodal">paasword</label>
+              <input type="paasword" class="form-control" name="password" id="exampleFormControlInput1"
+                placeholder="Generate your paasword" required>
+            </div>
+            <div class="form-group">
+              <label for="signupmodal">confirm password</label>
+              <input type="password" class="form-control" name="confirmpassword" id="exampleFormControlInput1"
+                placeholder="confirm  your paasword" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Continue</button>
+
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="seemoremodal" data-backdrop="static" data-keyboard="false" tabindex="-1"
+    aria-labelledby="seemoremodal" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="seemoremodal">Check-out other features before leaving</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form action="exit/" method="GET">
+            <div class="form-group">
+              <label for="seemoremodal">Are you sure?</label>
+              <input type="checkbox" class="form-control" name="sure" id="exampleFormControlInput1" required>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Continue</button>
+
+
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <br>
+  </div>
+  <br>
+  <p id="personal">
+    <a class="btn btn-warning" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false"
+      aria-controls="multiCollapseExample1"> About</a>
+    <button class="btn btn-dark" type="button" data-toggle="collapse" data-target="#multiCollapseExample2"
+      aria-expanded="false" aria-controls="multiCollapseExample2">Batch</button>
+    <button class="btn btn-danger" type="button" data-toggle="collapse" data-target=".multi-collapse"
+      aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2">Name</button>
+  </p>
+  <div class="row">
+    <div class="col">
+      <div class="collapse multi-collapse" id="multiCollapseExample1">
+        <div class="card card-body">
+          We are 2018 btech batch of NIT JAMSHEDPUR. This name 'B-Block hackers' came from a whatsapp group name of
+          B-Block.
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="collapse multi-collapse" id="multiCollapseExample2">
+        <div class="card card-body">
+          Its just a place where you will get all the details and stories about memories and achievements of the
+          members. you can create account and be a part of our team . sign in to get started
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <br>
+  <h4>SEND A MESSAGE TO ADMIN(Do- give a feedback) :</h4>
+
+  <form id="mera" action="/bblock/message/" method="post">{% csrf_token %}
+    <div class="form-group">
+      <label for="exampleFormControlInput1">Your first name</label>
+      <input type="name" class="form-control" id="exampleFormControlInput1" name="name"
+        placeholder="Enter your account name" required>
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlInput1">Paasword</label>
+      <input type="password" class="form-control" id="exampleFormControlInput1" name="password"
+        placeholder="Enter your password" required>
+    </div>
+
+
+    <div class="form-group">
+      <label for="exampleFormControlTextarea1">Your message</label>
+      <textarea class="form-control" id="exampleFormControlTextarea1" name="message" rows="3" required`></textarea>
+    </div>
+    <button type="submit" class="btn btn-outline-success">Send</button>
+  </form>
+  <br>
+  <br>
+  <h3>Top-News( Do give it a read) :</h3>
+  <div class="album py-5 bg-dark">
+    <div class="container">
+
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <svg xmlns="{%static '1.jpg' %}" class="bd-placeholder-img card-img-top" role="img"
+              aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false" width="100%"
+              height="225">
+              <title>Placeholder</title>
+              <rect fill="black" width="100%" height="100%" /><text fill="#eceeef" x="50%" y="50%"
+                dy="0.3em">SSR-CASE</text>
+            </svg>
+            <div class="card-body">
+              <p class="card-text">
+                Rhea Chakraborty asks CBI to act against neighbour for ‘false’ claim on TV</p>
+              <br>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button class="btn btn-sm btn-outline-success" type="button"><a
+                      href="https://www.hindustantimes.com/india-news/rhea-chakraborty-asks-cbi-to-act-against-neighbour-for-false-claim-on-tv/story-lqPpIbvtfBDVqyINcA3BLK.html">Read</a></button>
+
+                </div>
+                <small class="text-muted">4 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <svg xmlns="http://www.w3.org/2000/svg" class="bd-placeholder-img card-img-top" role="img"
+              aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false" width="100%"
+              height="225">
+              <title>Placeholder</title>
+              <rect fill="black" width="100%" height="100%" /><text fill="#eceeef" x="10%" y="50%"
+                dy="0.3em">HATHRAS-CASE UPDATES</text>
+            </svg>
+            <div class="card-body">
+              <p class="card-text"> Allahabad High Court Adjourns Hearing To November 2</p>
+              <br>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button class="btn btn-sm btn-outline-success" type="button"><a
+                      href="https://www.ndtv.com/india-news/hathras-gang-rape-case-live-updates-victims-family-leaves-for-lucknow-to-appear-before-allahabad-high-court-today-2308685">View</a></button>
+
+                </div>
+                <small class="text-muted">3 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <svg xmlns="http://www.w3.org/2000/svg" class="bd-placeholder-img card-img-top" role="img"
+              aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false" width="100%"
+              height="225">
+              <title>Placeholder</title>
+              <rect fill="black" width="100%" height="100%" /><text fill="#eceeef" x="10%" y="50%" dy="0.3em">COVID-19
+                UPDATES:</text>
+            </svg>
+            <div class="card-body">
+              <p class="card-text">Coronavirus Cases:
+                37,835,155 till 12th october 2020</p>
+              <br>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button class="btn btn-sm btn-outline-success" type="button"><a
+                      href="https://www.worldometers.info/coronavirus/">Read</a></button>
+
+                </div>
+                <small class="text-muted">6 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <svg xmlns="http://www.w3.org/2000/svg" class="bd-placeholder-img card-img-top" role="img"
+              aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false" width="100%"
+              height="225">
+              <title>Placeholder</title>
+              <rect fill="black" width="100%" height="100%" /><text fill="#eceeef" x="10%" y="50%"
+                dy="0.3em">IPL-UPDATES:</text>
+            </svg>
+            <div class="card-body">
+              <p class="card-text">Mumbai gets the first position , chennai remains second last , ishant sharma ruled
+                out of IPL due to injury</p>
+              <br>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button class="btn btn-sm btn-outline-success" type="button"><a
+                      href="https://sportstar.thehindu.com/cricket/ipl/ipl-news/">View</a></button>
+
+                </div>
+                <small class="text-muted">12 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <svg xmlns="http://www.w3.org/2000/svg" class="bd-placeholder-img card-img-top" role="img"
+              aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false" width="100%"
+              height="225">
+              <title>Placeholder</title>
+              <rect fill="black" width="100%" height="100%" /><text fill="#eceeef" x="10%" y="50%" dy="0.3em">Sachin on
+                yuzvinder chahal: </text>
+            </svg>
+            <div class="card-body">
+              <p class="card-text">Sachin Tendulkar says RCB's Chahal was 'playing chess' against MS Dhoni in Dubai</p>
+              <br>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button class="btn btn-sm btn-outline-success" type="button"><a
+                      href="https://www.indiatoday.in/sports/ipl-2020/story/sachin-tendulkar-says-chahal-was-playing-chess-mind-games-vs-ms-dhoni-csk-rcb-ipl-2020-1730886-2020-10-12">Read</a></button>
+
+                </div>
+                <small class="text-muted">3 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <svg xmlns="http://www.w3.org/2000/svg" class="bd-placeholder-img card-img-top" role="img"
+              aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false" width="100%"
+              height="225">
+              <title>Placeholder</title>
+              <rect fill="black" width="100%" height="100%" /><text fill="#eceeef" x="0%" y="50%" dy="0.3em">Pakistan
+                again violated ceasefire , 2 dead .</text>
+            </svg>
+            <div class="card-body">
+              <p class="card-text">Pak Army shells forward areas along LoC in J&K’s Poonch, no casualties reported</p>
+              <br>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button class="btn btn-sm btn-outline-success" type="button"><a
+                      href="https://www.indiatoday.in/india/story/pakistan-army-shells-forward-areas-along-loc-in-j-k-s-poonch-no-casualties-reported-1730899-2020-10-12">Read</a></button>
+
+                </div>
+                <small class="text-muted">9 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <svg xmlns="http://www.w3.org/2000/svg" class="bd-placeholder-img card-img-top" role="img"
+              aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false" width="100%"
+              height="225">
+              <title>Placeholder</title>
+              <rect fill="black" width="100%" height="100%" /><text fill="#eceeef" x="20%" y="50%"
+                dy="0.3em">VACCINE-UPDATES:</text>
+            </svg>
+            <div class="card-body">
+              <p class="card-text">Second human trials of Russia's Sputnik V Covid vaccine start in UAE</p>
+              <br>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button class="btn btn-sm btn-outline-success" type="button"><a
+                      href="https://www.livemint.com/science/health/second-human-trials-of-russia-s-sputnik-v-covid-vaccine-start-in-uae-11602508862782.html">Read</a></button>
+
+                </div>
+                <small class="text-muted">4 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <svg xmlns="http://www.w3.org/2000/svg" class="bd-placeholder-img card-img-top" role="img"
+              aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false" width="100%"
+              height="225">
+              <title>Placeholder</title>
+              <rect fill="black" width="100%" height="100%" /><text fill="#eceeef" x="50%" y="50%" dy="0.3em">World
+                News: </text>
+            </svg>
+            <div class="card-body">
+              <p class="card-text">Iran has highest daily virus death toll, new patient count</p>
+              <br>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button class="btn btn-sm btn-outline-success" type="button"><a
+                      href="https://www.livemint.com/news/world/iran-has-highest-daily-virus-death-toll-new-patient-count-11602511104768.html">Read</a></button>
+
+                </div>
+                <small class="text-muted">9 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <svg xmlns="http://www.w3.org/2000/svg" class="bd-placeholder-img card-img-top" role="img"
+              aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false" width="100%"
+              height="225">
+              <title>Placeholder</title>
+              <rect fill="black" width="100%" height="100%" /><text fill="#eceeef" x="20%" y="50%" dy="0.3em">World
+                Updates:</text>
+            </svg>
+            <div class="card-body">
+              <p class="card-text">Meghan Markle says she was the most-trolled person in 2019: It's almost unsurvivable
+              </p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button class="btn btn-sm btn-outline-success" type="button"><a
+                      href="https://www.indiatoday.in/lifestyle/celebrity/story/meghan-markle-says-she-was-the-most-trolled-person-in-2019-it-s-almost-unsurvivable-1730894-2020-10-12">Read</a></button>
+
+                </div>
+                <small class="text-muted">2 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="text-muted">
+    <div class="container">
+      <p class="float-right">
+        <a href="/">Back to log in page</a>
+      </p>
+      <p>B-block is the blockname where the members lived in the hostel of NIT JAMSHEDPUR</p>
+      <p>New to page? <a href="https://www.zomato.com/jamshedpur/junction-restraurant-sakchi">Visit our sponsor</a> and
+        do order food <a href="https://brubeckbakery.com/">Another sponsor</a>.</p>
+    </div>
+  </footer>
+
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

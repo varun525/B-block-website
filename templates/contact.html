@@ -1,0 +1,91 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+  <title>Hello, world!</title>
+  <style>
+    body {
+      background-color: rgb(75, 68, 68);
+    }
+
+    form {
+      padding: 30px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="alert alert-warning alert-dismissible fade show" role="alert">
+    <strong>Holy guacamole!</strong> <a href="#" class="alert-link">Do like us on facebook</a>. You have reached the
+    contact-us page!!
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <br>
+  <h2>CONTACT-US HERE!</h2>
+  <div class="container">
+    <form style='background-image:url( "{%static 'back6.jpg' %}");' action="/bblock/contact/" method="post"> {% csrf_token %}
+      <div class="form-group">
+        <label for="exampleFormControlInput1">Your name</label>
+        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlInput1">Your college</label>
+        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="College" name="college" required>
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlInput1">Your phone number</label>
+        <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="Your phone number" name="number">
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlInput1">Home-town</label>
+        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Town name" name="towm">
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlInput1">Your email-id</label>
+        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Your email id" name="mail">
+      </div>
+
+
+
+      <div class="form-group">
+        <label for="exampleFormControlTextarea1">Your query</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+          placeholder="write your query here" name="text"></textarea>
+      </div>
+      <button type="submit" class="btn btn-success" id="message">Send</button>
+ 
+      
+    </form>
+  </div>
+  <br>
+  <div class="alert alert-dark" role="alert">
+    You can also contact us on <a href="#" class="alert-link">Our instagram page</a>. You can also mail us at
+    jhakvarun1999@gmail.com
+  </div>
+
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

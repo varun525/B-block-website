@@ -1,0 +1,105 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+    <style>
+        body {
+            background-color: rgb(112, 102, 102);
+        }
+
+        h6 {
+            color:red;
+            font-family: cursive;
+            font-weight: bolder;
+        }
+
+        #mera {
+            border: 3px solid rgb(80, 76, 76);
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    {% for message in messages %}
+    <div class="alert alert-{ message.tags }} alert-dismissible fade show" role="alert">
+        <strong>Hello there! </strong> {{message}}
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+
+    {% endfor %}
+    <br>
+    <div class="container">
+        <h6>Wanna be a part of members section, you came at the right place!</h6>
+        <br>
+        <form action="/bblock/induction/" method="POST" id="mera" style='background-image:url( "{%static 'induct.jpg' %}");' >{% csrf_token %}
+            <div class="form-group">
+                <label for="exampleFormControlInput1">name</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" name="name"
+                    placeholder="enter your name">
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlInput1">BRANCH</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" name="branch"
+                    placeholder="Your branch">
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlInput1">Description</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" name="description"
+                    placeholder="write a short description of yourself">
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlInput1">CGPA</label>
+                <input type="number" class="form-control" id="exampleFormControlInput1" name="cgpa"
+                    placeholder="Enter your CGPA">
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlInput1">Your email</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" name="mail"
+                    placeholder="Enter your mail">
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlInput1">Your instagram handle</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" name="instagram"
+                    placeholder="Enter here insta-ID">
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlTextarea1">Fill this(IMPORTANT!)</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" name="text" rows="10"
+                    placeholder="why should we add you?"></textarea>
+            </div>
+            <button type="submit" class="btn btn-outline-success">Submit</button>
+        </form>
+    </div>
+    <br>
+    <form action="/bblock/logout/">{% csrf_token %}
+        <button type="submit" class="btn btn-primary">Log-out</button>
+    </form>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
